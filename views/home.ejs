@@ -4,4 +4,9 @@
 
 <p><%= starting %></p>
 
+<% for(let i = 0; i<postsList.length;i++){ %>
+    <h1><%= postsList[i].title %></h1>
+    <p><%= postsList[i].content %></p>
+<% } %>
+
 <%- include("partials/footer"); -%>
