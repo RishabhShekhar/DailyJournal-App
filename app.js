@@ -21,6 +21,18 @@ app.get("/", function(req, res){
 
 });
 
+app.get("/about", function(req, res){
+
+  res.render("about",{abcontent:aboutContent});
+
+});
+
+app.get("/contact", function(req, res){
+
+  res.render("contact", {concontent: contactContent})
+
+})
+
 
 
 app.listen(8000, function() {
