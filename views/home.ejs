@@ -4,9 +4,10 @@
 
 <p><%= starting %></p>
 
-<% for(let i = 0; i<postsList.length;i++){ %>
-    <h1><%= postsList[i].title %></h1>
-    <p><%= postsList[i].content %></p>
-<% } %>
+<% postsList.forEach(function(item){ %>
+    <h1><%= item.title %></h1>
+    <p><%= item.content.substring(0,100)+"..." %>
+        <a href="posts/<%= item.title %>">Read More</a></p>
+<% }); %>
 
 <%- include("partials/footer"); -%>
